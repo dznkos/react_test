@@ -1,10 +1,13 @@
 
 import React from 'react';
+import PropTypes from 'prop-types';
 // Functional Component (FC)
 
-const PrimeraApp = () => {
+const PrimeraApp = ({ saludo }) => {
 
-    const saludo = 'Holaaaz';
+    //const saludo = 'Holaaaz';
+
+
 
     return (
         <> 
@@ -13,6 +16,12 @@ const PrimeraApp = () => {
             <p>Mi primera aplicación</p>
         </>
     );
+}
+
+PrimeraApp.propTypes = {
+
+    saludo: PropTypes.string.isRequired
+
 }
  
 export default PrimeraApp;
